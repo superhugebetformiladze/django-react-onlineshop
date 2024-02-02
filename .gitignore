@@ -29,9 +29,6 @@ build/
 # Compiled C extensions
 *.so
 
-# Django migrations
-**/migrations/
-
 # Django testing
 htmlcov/
 
