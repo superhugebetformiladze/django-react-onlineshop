@@ -1,12 +1,17 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom'
 import MainPage from './pages/MainPage/MainPage';
+import ProductPage from './pages/ProductPage/ProductPage';
 import Layout from './components/common/Layout/Layout';
 
 
-const App: React.FC = () => {
+function App() {
   return (
     <Layout>
-      <MainPage />
+      <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/product/:productId" element={<ProductPage />} />
+      </Routes>
     </Layout>
   );
 }

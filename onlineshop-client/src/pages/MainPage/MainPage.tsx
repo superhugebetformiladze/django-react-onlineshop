@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ProductCard from '../../components/ProductCard/ProductCard';
+import ProductCard from '../../components/Product/ProductCard/ProductCard';
 import { fetchProducts } from '../../api/Products/fetchProducts';
 
 const MainPage: React.FC = () => {
