@@ -1,11 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
   const [navbar, setNavbar] = useState(false);
 
+  const closeNavbar = () => {
+    setNavbar(false);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const navElement = document.getElementById("navbar");
+      if (navElement && !navElement.contains(event.target as Node)) {
+        closeNavbar();
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <nav className="w-full bg-white shadow">
+    <nav id="navbar" className="w-full bg-white shadow">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
@@ -57,17 +76,16 @@ const Header: React.FC = () => {
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               <li className="text-gray-600 hover:text-blue-600">
-              <Link to={'/'}>Home</Link>
-                
+                <Link to={'/'} onClick={closeNavbar}>Home</Link>
               </li>
               <li className="text-gray-600 hover:text-blue-600">
-              <Link to={'/'}>Blog</Link>
+                <Link to={'/'} onClick={closeNavbar}>Blog</Link>
               </li>
               <li className="text-gray-600 hover:text-blue-600">
-              <Link to={'/'}>About US</Link>
+                <Link to={'/'} onClick={closeNavbar}>About US</Link>
               </li>
               <li className="text-gray-600 hover:text-blue-600">
-              <Link to={'/'}>Contact US</Link>
+                <Link to={'/'} onClick={closeNavbar}>Contact US</Link>
               </li>
             </ul>
           </div>
