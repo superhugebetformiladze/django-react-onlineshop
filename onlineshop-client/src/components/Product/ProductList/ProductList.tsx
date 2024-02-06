@@ -1,7 +1,7 @@
 // ProductList.tsx
 import React from 'react';
 import ProductCard from '../ProductCard/ProductCard';
-import useProducts from '../../../hooks/useProducts';
+import useProducts from '../../../hooks/Products/useProducts';
 
 const ProductList: React.FC = () => {
   const products = useProducts();
