@@ -1,9 +1,7 @@
-// В ProductPage.tsx:
-
 import React, { useState, useEffect } from 'react';
-import ProductInfo from '../../components/Product/ProductInfo/ProductInfo';
-import { fetchProductById } from '../../api/Products/fetchProductById';
-import { IProduct } from '../../models/ProductModel';
+import ProductInfo from '@components/Product/ProductInfo/ProductInfo';
+import { fetchProductById } from '@api/Products/fetchProductById';
+import { IProduct } from '@models/ProductModel';
 import { useParams } from 'react-router-dom';
 
 const ProductPage: React.FC = () => {

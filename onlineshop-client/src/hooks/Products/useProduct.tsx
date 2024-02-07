@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { fetchProductById } from '../../api/Products/fetchProductById';
-import { IProduct } from '../../models/ProductModel';
+import { fetchProductById } from '@api/Products/fetchProductById';
+import { IProduct } from '@models/ProductModel';
 
 const useProduct = (productId: number) => {
   const [product, setProduct] = useState<IProduct | null>(null);

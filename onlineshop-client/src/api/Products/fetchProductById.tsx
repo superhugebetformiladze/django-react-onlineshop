@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 import baseURL from '../config/config';
-import { IProduct } from '../../models/ProductModel';
+import { IProduct } from '@models/ProductModel';
 
 
 

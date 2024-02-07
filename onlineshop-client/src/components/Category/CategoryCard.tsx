@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { IProduct } from '@models/ProductModel';
 
 interface ProductCardProps {
-  product: IProduct;
+  product: {
+    id: number;
+    name: string;
+    price: number;
+  };
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
@@ -11,7 +14,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     <Link to={`/product/${product.id}`}>
       <div className="border rounded-lg overflow-hidden shadow-md">
         <img
-          src={product.image}
+          src={''}
           alt={product.name}
           className="w-full h-32 object-cover"
         />
