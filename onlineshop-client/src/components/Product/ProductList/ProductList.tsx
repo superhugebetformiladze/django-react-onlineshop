@@ -1,4 +1,3 @@
-// ProductList.tsx
 import React from 'react';
 import ProductCard from '../ProductCard/ProductCard';
 import useProducts from '@hooks/Products/useProducts';
