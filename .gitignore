@@ -18,6 +18,8 @@ node_modules/
 build/
 .DS_Store
 *.log
+.husky
+bundle.js*
 
 # IDE
 .idea/
