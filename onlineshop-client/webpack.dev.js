@@ -9,8 +9,9 @@ const devConfig = {
       directory: path.join(__dirname, "public"),
     },
     port: 3000,
-    open: true, // открывает автоматически страницу в браузере при запуске
-    hot: true, // при изменениях перезагружает страницу
+    open: true,
+    hot: true,
+    historyApiFallback: true,
   },
 };
 
